@@ -19,8 +19,8 @@ public class SWEA_Solution_1954_달팽이숫자_D2_김태상 {
 			int result=1;
 			
 
-			while(true) {
-				if(result>N*N)break;
+			while(result <= N*N ) {
+				
 				for (int n= 0; n < t; n++) {
 					y=y+plus;
 					arr[x][y]=result++;

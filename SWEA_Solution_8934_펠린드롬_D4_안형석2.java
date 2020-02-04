@@ -1,8 +1,7 @@
-package SWEA;
 
 import java.util.Scanner;
 
-public class SWEA_Solution_8934_Æç¸°µå·Ò_D4_¾ÈÇü¼®2 {
+public class SWEA_Solution_8934_ì•ˆí˜•ì„ {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int tc = sc.nextInt();

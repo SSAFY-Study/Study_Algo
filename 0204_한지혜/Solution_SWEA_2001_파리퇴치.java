@@ -21,7 +21,7 @@ public class Solution_SWEA_2001_ÆÄ¸®ÅðÄ¡ {
 //				System.out.println();
 //			}
 			int deadMax = 0;
-			int[] idx = {0,0};
+//			int[] idx = {0,0};
 			for (int i = 0; i <= space.length-m; i++) {
 				for (int j = 0; j <= space[i].length-m; j++) {
 					int dead = 0;
@@ -32,8 +32,8 @@ public class Solution_SWEA_2001_ÆÄ¸®ÅðÄ¡ {
 					}
 					if(dead>= deadMax) {
 						deadMax = dead;
-						idx[0] = i;
-						idx[1] = j;
+//						idx[0] = i;
+//						idx[1] = j;
 					}
 				}
 			}

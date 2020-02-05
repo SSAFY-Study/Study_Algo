@@ -1,12 +1,12 @@
 /**
  * 
-ÀÔ·Â
+ì…ë ¥
 3
 level     
 samsung
 eye        
 
- Ãâ·Â
+ ì¶œë ¥
 #1 1
 #2 0
 #3 1
@@ -14,7 +14,7 @@ eye
  */
 import java.util.Scanner;
 
-public class Solution_SWEA_1989_ÃÊ½ÉÀÚÀÇÈ¸¹®°Ë»ç {
+public class Solution_SWEA_1989_ì´ˆì‹¬ìì˜íšŒë¬¸ê²€ì‚¬ {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int TC = sc.nextInt();
@@ -22,7 +22,10 @@ public class Solution_SWEA_1989_ÃÊ½ÉÀÚÀÇÈ¸¹®°Ë»ç {
 			String str = sc.next();
 			boolean flag = true;
 			for (int i = 0; i <= str.length()/2; i++) {
-				if(str.charAt(i) != str.charAt(str.length()-1-i)) flag = false; 
+				if(str.charAt(i) != str.charAt(str.length()-1-i)) {
+					
+					flag = false; 
+					break;
 			}
 			if(flag) System.out.println("#"+ testCase + " "+ 1);
 			else System.out.println("#"+ testCase + " "+ 0);

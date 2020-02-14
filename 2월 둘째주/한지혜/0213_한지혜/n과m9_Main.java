@@ -6,47 +6,52 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class n°úm5_Main {
+public class n°úm9_Main {
 	static int n, m;
-	static int[] arr;
-	static int[] out;
+	static int[] inData;
+	static int[] output;
 	static boolean[] used;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
+
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
-		arr = new int[n];
-		out = new int[m];
+
+		inData = new int[n];
+		output = new int[m];
 		used = new boolean[n];
 		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < n; i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
+
+		for (int i = 0; i < inData.length; i++) {
+			inData[i] = Integer.parseInt(st.nextToken());
 		}
-		Arrays.sort(arr);
+
+		Arrays.sort(inData);
 		dfs(0);
+
 		br.close();
 		bw.flush();
 		bw.close();
+
 	}// end of main
 
-	public static void dfs(int i) throws IOException {
-		if (i == m) {
-			for (int j = 0; j < m; j++) {
-				bw.write(out[j] + " ");
+	public static void dfs(int depth) throws IOException {
+		if (depth == m) {
+			for (int i = 0; i < output.length; i++) {
+				bw.write(output[i] + " ");
 			}
 			bw.newLine();
 		} else {
-			for (int j = 0; j < n; j++) {
-				if (used[j])
+			for (int i = 0; i < inData.length; i++) {
+				if (used[i] || output[depth] == inData[i])
 					continue;
-				used[j] = true;
-				out[i] = arr[j];
-				dfs(i + 1);
-				used[j] = false;
-				
+				used[i] = true;
+				output[depth] = inData[i];
+				dfs(depth + 1);
+				used[i] = false;
 			}
 		}
 	}
